@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Cycle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0b132b; /* Updated background color */
+            color: #fff;
+        }
+
+        .headerc {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(image/360_F_189753948background.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for the navigation bar */
+        }
+
+        nav img {
+            width: 150px;
+        }
+
+        .nav-link ul {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .nav-link ul li {
+            display: inline-block;
+            margin-right: 20px; /* Add some spacing between navigation items */
+        }
+
+        .nav-link ul li:last-child {
+            margin-right: 0; /* Remove margin from the last navigation item */
+        }
+
+        .nav-link ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px; /* Increased font size for better readability */
+            transition: color 0.3s;
+        }
+
+        .nav-link ul li a:hover {
+            color: #ff6600;
+        }
+
+        .text-box {
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .text-box h1 {
+            font-size: 48px; /* Adjusted font size for better aesthetics */
+        }
+
+        .text-box p {
+            margin: 20px 0 40px; /* Increased margin for better spacing */
+            font-size: 18px; /* Increased font size for better readability */
+        }
+
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff6600; /* Updated button background color */
+            padding: 15px 40px; /* Increased padding for a larger button */
+            font-size: 16px;
+            border-radius: 5px; /* Added border radius for rounded corners */
+            transition: background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #f44335;
+        }
+
+        nav .fa {
+            display: none;
+        }
+
+        /*---------anime-----*/
+        .Anime {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100ox; /* This seems like a typo, should be 'px' */
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Anime-col {
+            flex-basis: 31%;
+            background:  #5aee15;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .Anime-col:hover{
+            box-shadow: 0 0 20px 0px rgb(236, 229, 229);
+        }
+
+        /*-----lists------*/
+        .lists{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .lists-col{
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lists-col img{
+            width: 100%;
+            display:block;
+        }
+
+        .layer{
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;    
+        }
+
+        .layer:hover{
+            background: rgba(0, 226, 64, 0.7);
+        }
+
+        .layer h3{
+            width: 100%;
+            font-weight: 500;
+            color: #fff;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            transition: 0.5s;
+        }
+
+        .layer:hover h3{
+            bottom: 49%;
+            opacity: 1;
+        }
+
+        /*-------facilities-----*/
+        .facilities{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .facilities-col{
+            flex-basis: 31%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+        }
+
+        .facilities-col img{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .facilities-col p{
+            padding: 0%;
+        }
+
+        .facilities-col h3{
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /*-------testimonials-----*/
+        .testimonials{
+            width: 80%;
+            margin: auto;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .testimonia-col{
+            flex-basis: 44%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+            background: #e50a0a;
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .testimonia-col img{
+            height: 40px;
+            margin-left: 5px;
+            margin-right: 30px;
+            border-radius: 50%;
+        }
+
+        .testimonia-col p{
+            padding: 0;
+        }
+
+        .testimonia-col h3{
+            margin-top: 15px;
+            text-align: left;
+        }
+        .testimonia-col .fa{
+            color: #e8c812;
+        }
+        /*-----------call to action--------------*/
+        .cta{
+            margin: 100px auto;
+            width: 80%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('image/truck.webp');
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            text-align: center;
+            padding: 100px 0,
+            }
+            .cta h1{
+                color:#fff;
+                margin-bottom: 40px;
+                padding: 0;
+
+            }
+
+   /*-----------footer--------------*/
+  .footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+  }
+  .footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  .icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+  }
+  .icons .fab.fa-facebook {
+    color: #1877f2; /* Facebook blue color */
+}
+.icons .fab.fa-instagram {
+    color: #bc2a8d; /* Instagram pink color */
+}
+.icons .fab.fa-tiktok {
+    color: #1c9be6; /* TikTok blue color */
+}
+
+  .fa-heart-o{
+    color: #e50a0a;
+  }
+
+    </style>
+</head>
+<body>
+    <section class="headerc">
+        <nav>
+            <a href="index.html"><img src="image/WASTE_MANAGEMENT_logo_.webp" alt="Logo"></a>
+            <div class="nav-link">
+                <i class="fa fa-window-close-o"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" ></i>
+        </nav>
+        <div class="text-box">
+            <h1>Eco Cycle</h1>
+            <p>Anime (Japanese: アニメ, IPA: [aꜜɲime] ) is hand-drawn and computer-generated animation originating from Japan. <br>Outside Japan and in English, anime refers specifically to animation produced in Japan. However, in Japan and in Japanese, anime (a term derived from a shortening of the English word animation) describes all animated works, regardless of style or origin.</p>
+            <a href="#" class="hero-btn">Visit Us To Know More</a>
+        </div>
+    </section>
+
+    <!----anime list-->
+    <section class="Anime">
+        <h1>
+            Product we offer
+        </h1>
+        <p1> <!-- Typo: Should be <p> -->
+            Worms, Buckets, Fertilizers and many more....
+        </p1>
+        <div class="row">
+            <div class="Anime-col">
+                <h3>Fertilizers</h3>
+                <p>The best new anime coming this spring, when they premiere, and when to watch them on Crunchyroll and Netflix, with shows like Jujutsu Kaisen, Bleach Thousand Year Blood War, and Zom 100: Bucket List of the Dead.</p>
+            </div>
+            <div class="Anime-col">
+                <h3>Earthworms</h3>
+                <p>The best new anime coming this spring, when they premiere, and when to watch them on Crunchyroll and Netflix, with shows like Jujutsu Kaisen, Bleach Thousand Year Blood War, and Zom 100: Bucket List of the Dead.</p>
+            </div>
+            <div class="Anime-col">
+                <h3>Pickup services</h3>
+                <p>The best new anime coming this spring, 
+                    when they premiere, and when to watch them on Crunchyroll and Netflix, 
+                    with shows like Jujutsu Kaisen, Bleach Thousand Year Blood War, and Zom 100: Bucket List of the Dead.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-----list-->
+    <section class="lists">
+        <h1>Our Top services</h1>
+        <p>The best new anime coming this spring, 
+            when they premiere, and when to watch them on Crunchyroll and Netflix, 
+            with shows like Jujutsu Kaisen, Bleach Thousand Year Blood War, and Zom 100: 
+            Bucket List of the Dead.</p>
+        <div class="row">
+            <div class="lists-col">
+                <img src="https://garage-website-1--sushilt2059.repl.co/static/truck.webp">
+                <div class="layer">
+                    <h3>
+                        pick of services
+                    </h3>
+                </div>
+            </div>
+            <div class="lists-col">
+                <img src="image/recycle-concept-with-box-rubbish_23-2147825494.avif">
+                <div class="layer">
+                    <h3>
+                       recycle 
+                    </h3>
+                </div>
+            </div>
+            <div class="lists-col">
+                <img src="image/easy-waste-bin-pruning-leaves-image-364x190.webp">
+                <div class="layer">
+                    <h3>
+                        Easy Fertilizers
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------testimonials-->
+    <section class="testimonials">
+        <h1>What Our Viewers Say</h1>
+        <p>Music, Manga, Light novels, Download and other.</p>
+        <div class="row">
+            <div class="testimonia-col">
+                <img src="image/photo-1499155286265-79a9dc9c6380.avif">
+                <div>
+                    <p>We didn't want to drive so we took the train to the city and back home.</p>
+                    <h3>
+                        Sushma Dhital
+                    </h3>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="far fa-star-o" ></i>
+                </div>
+            </div>
+            <div class="testimonia-col">
+                <img src="image/photo-1528892952291-009c663ce843.avif">
+                <div>
+                    <p>We didn't want to drive so we took the train to the city and back home.</p>
+                    <h3>
+                        Supriya Dotel
+                    </h3>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="far fa-star-half-o" ></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--------call to action-->
+    <section class="cta">
+        <h1>For More info about Us contact us<br> Anywhere from the world</h1>
+        <a href=""class="hero-btn">CONTACT US</a>
+
+    </section>
+     <!--------footer-->
+     <section class="footer">
+        <h4>About us</h4>
+        <p>
+            nimEigo, founded by Robert Woodhead in 1988, made a name for itself
+             with faithful translations and <br>extensive liner notes devoted to explaining
+              as much about their titles as possible.
+        </p>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
+        </div>
+        <p>
+            Made with <i class="fas fa-heart"></i> by Eco-Cycle
+</p>
+
+
+     </section>
+</body>
+</html>
